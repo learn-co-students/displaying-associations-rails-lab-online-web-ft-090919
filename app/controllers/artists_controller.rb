@@ -1,5 +1,8 @@
 class ArtistsController < ApplicationController
+  before_action :set_user
+  
   def index
+    @artists = Artist.all
   end
 
   def show
@@ -44,7 +47,13 @@ class ArtistsController < ApplicationController
 
   private
 
+  def set_user
+    @artist = Artist.find(params[:id]) if params[:id]
+  end
+
   def artist_params
     params.require(:artist).permit(:name)
   end
+
+  
 end
