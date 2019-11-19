@@ -1,11 +1,11 @@
-<h1>Editing <%= @song.name %></h1>
+<h1>Editing <%= @song.name %></h1> #display the song name your editing 
 
-<%= form_for @song  do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <br />
+# <%= form_for @song  do |f| %>
+#   <%= f.label :title %>
+#   <%= f.text_field :title %>
+#   <br />
 
-  <%= f.submit %>
-<% end %>
+#   <%= f.submit %>
+# <% end %>
 
-
+<%= render "form" %> #takes you to a form to edit a song 
