@@ -1,0 +1,9 @@
+<h1>Artist</h1> 
+<% @artist.each do |artist| %> #for every artist do somthing 
+    <ul>
+<%= link_to artist.name, artist_path(artist) %>     # link to artistname ik real creative
+<%= artist.song_count %> <%= "song".pluralize(artist.song_count) %>    # 1 song 11 songs 
+<% end %>
+
+</ul>
+
